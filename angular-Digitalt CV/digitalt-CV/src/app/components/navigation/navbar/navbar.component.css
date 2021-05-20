@@ -1,0 +1,7 @@
+a {
+    font-weight: 500;
+}
+
+a:hover, .active {
+    color: orange !important;
+}

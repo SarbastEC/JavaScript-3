@@ -36,29 +36,25 @@ const Register = () => {
                 {/* <!-- 2 column grid layout with text inputs for the first and last names --> */}
                 <div className="row mb-4">
                     <div className="col">
-                    <div className="form-outline input-border">
-                        <input type="text" id="form3Example1" className="form-control" onChange={(e)=> setFirstName(e.target.value)}/>
-                        <label className="form-label" for="form3Example1">First name</label>
+                    <div className="input-border">
+                        <input type="text" placeholder="First name" className="form-control py-2" onChange={(e)=> setFirstName(e.target.value)}/>
                     </div>
                     </div>
                     <div className="col">
-                    <div className="form-outline input-border">
-                        <input type="text" id="form3Example2" className="form-control" onChange={(e)=> setLastName(e.target.value)} />
-                        <label className="form-label" for="form3Example2">Last name</label>
+                    <div className="input-border">
+                        <input type="text" placeholder="Last name" className="form-control py-2" onChange={(e)=> setLastName(e.target.value)} />
                     </div>
                     </div>
                 </div>
 
                 {/* <!-- Email input --> */}
-                <div className="form-outline mb-4 input-border">
-                    <input type="email" id="form3Example3" className="form-control" onChange={(e)=> setEmail(e.target.value)}/>
-                    <label className="form-label" for="form3Example3">Email address</label>
+                <div className="mb-4 input-border">
+                    <input type="email" placeholder="Email address" className="form-control py-2" onChange={(e)=> setEmail(e.target.value)}/>
                 </div>
 
                 {/* <!-- Password input --> */}
-                <div className="form-outline mb-4 input-border">
-                    <input type="password" id="form3Example4" className="form-control" onChange={(e)=> setPassword(e.target.value)}/>
-                    <label className="form-label" for="form3Example4">Password</label>
+                <div className="mb-4 input-border">
+                    <input type="password" placeholder="Password" className="form-control py-2" onChange={(e)=> setPassword(e.target.value)}/>
                 </div>
 
                 {/* <!-- Submit button --> */}

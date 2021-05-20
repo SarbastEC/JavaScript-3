@@ -30,29 +30,25 @@ const ShippingAddress = () => {
             <form className='mt-5 border p-5' onSubmit={submitHandler}>
 
                 {/* <!-- Text input --> */}
-                <div className="form-outline mb-4 border-bottom">
-                    <input type="text" id="form6Example1" value={fullName} className="form-control" onChange={(e) => setFullName(e.target.value)} />
-                    <label className="form-label" for="form6Example1">Full Name</label>
+                <div className="mb-4">
+                    <input type="text" placeholder="Full Name" value={fullName} className="form-control py-2" onChange={(e) => setFullName(e.target.value)} />
                 </div>
 
 
                 {/* <!-- Text input --> */}
-                <div className="form-outline mb-4 border-bottom">
-                    <input type="text" id="form6Example2" value={address} className="form-control" onChange={(e) => setAddress(e.target.value)}/>
-                    <label className="form-label" for="form6Example2">Address</label>
+                <div className="mb-4">
+                    <input type="text" placeholder="Address" value={address} className="form-control py-2" onChange={(e) => setAddress(e.target.value)}/>
                 </div>
 
                 <div className="row mb-5">
                     <div className="col">
-                    <div className="form-outline border-bottom">
-                        <input type="text" id="form6Example3" value={postalCode} className="form-control" onChange={(e) => setPostalcode(e.target.value)}/>
-                        <label className="form-label" for="form6Example3">Postal code</label>
+                    <div>
+                        <input type="text" placeholder="Postal code" value={postalCode} className="form-control py-2" onChange={(e) => setPostalcode(e.target.value)}/>
                     </div>
                     </div>
                     <div className="col">
-                    <div className="form-outline border-bottom">
-                        <input type="text" id="form6Example4" value={city} className="form-control" onChange={(e) => setCity(e.target.value)}/>
-                        <label className="form-label" for="form6Example4">City</label>
+                    <div>
+                        <input type="text" placeholder="City" value={city} className="form-control py-2" onChange={(e) => setCity(e.target.value)}/>
                     </div>
                     </div>
                 </div>

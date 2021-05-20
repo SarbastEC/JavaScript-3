@@ -1,0 +1,16 @@
+p {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    border-bottom: 3px solid orange;
+}
+
+li {
+    font-size: 1.3rem;
+    list-style: none;
+    margin-bottom: 1rem;
+    padding: 0.7rem 6rem;
+}

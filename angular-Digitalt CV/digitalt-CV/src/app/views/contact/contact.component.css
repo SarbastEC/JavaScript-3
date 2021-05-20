@@ -1,0 +1,9 @@
+small, span {
+    color: orange;
+}
+
+.center {
+    display: grid;
+    min-height: calc(100vh - 112.8px);
+    place-items: center;
+}

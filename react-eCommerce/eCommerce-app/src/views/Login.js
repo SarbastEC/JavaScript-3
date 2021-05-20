@@ -34,15 +34,13 @@ const Login = () => {
             <p className="my-5 text-center h4">Log In</p>  
             <form className="border p-4 col-9 col-md-6 mx-auto" onSubmit={submitHandler} >
                 {/* // <!-- Email input --> */}
-                <div className="form-outline mb-4 input-border">
-                    <input type="email" id="form2Example1" className="form-control" onChange={(e) => setEmail(e.target.value)}/>
-                    <label className="form-label" for="form2Example1">Email address</label>
+                <div className="mb-4 input-border">
+                    <input type="email"  placeholder="Email address" className="form-control py-2" onChange={(e) => setEmail(e.target.value)}/>
                 </div>
 
                 {/* <!-- Password input --> */}
-                <div className="form-outline mb-4 input-border">
-                    <input type="password" id="form2Example2" className="form-control" onChange={(e) => setPassword(e.target.value)}/>
-                    <label className="form-label" for="form2Example2">Password</label>
+                <div className="mb-4 input-border">
+                    <input type="password" placeholder="Password" className="form-control py-2" onChange={(e) => setPassword(e.target.value)}/>
                 </div>
 
                 {/* <!-- Submit button --> */}
