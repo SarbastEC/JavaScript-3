@@ -13,12 +13,21 @@ const Register = () => {
     const  [lastName, setLastName] = useState('');
     const  [email, setEmail] = useState('');
     const  [password, setPassword] = useState('');
+    const  [isAdmin, setIsAdmin] = useState(false);
 
     const {userInfo, loading, err} = useSelector(state => state.userRegisterReducer);
 
+    const changeHandler = (e) => {
+        if(e.target.value === 'Admin'){
+            setIsAdmin(true)
+        } else {
+            setIsAdmin(false)
+        }
+    }
+
     const submitHandler = (e) => {
         e.preventDefault()
-        dispatch(register(firstName, lastName, email, password))
+        dispatch(register(firstName, lastName, email, password, isAdmin))
     }
 
     useEffect(() => {
@@ -36,33 +45,40 @@ const Register = () => {
                 {/* <!-- 2 column grid layout with text inputs for the first and last names --> */}
                 <div className="row mb-4">
                     <div className="col">
-                    <div className="input-border">
+                    <div>
                         <input type="text" placeholder="First name" className="form-control py-2" onChange={(e)=> setFirstName(e.target.value)}/>
                     </div>
                     </div>
                     <div className="col">
-                    <div className="input-border">
+                    <div>
                         <input type="text" placeholder="Last name" className="form-control py-2" onChange={(e)=> setLastName(e.target.value)} />
                     </div>
                     </div>
                 </div>
 
                 {/* <!-- Email input --> */}
-                <div className="mb-4 input-border">
+                <div className="mb-4">
                     <input type="email" placeholder="Email address" className="form-control py-2" onChange={(e)=> setEmail(e.target.value)}/>
                 </div>
 
                 {/* <!-- Password input --> */}
-                <div className="mb-4 input-border">
+                <div className="mb-4">
                     <input type="password" placeholder="Password" className="form-control py-2" onChange={(e)=> setPassword(e.target.value)}/>
                 </div>
+
+                {/* <!-- Role input --> */}
+                <select class="form-select mb-4" onChange={changeHandler}>
+                    <option disabled selected>Select Role</option>
+                    <option value="User">User</option>
+                    <option value="Admin">Admin</option>
+                </select>
 
                 {/* <!-- Submit button --> */}
                 <button type="submit" className="btn btn-dark btn-block mb-4">Register</button>
 
                 <div className="d-flex">
                     <p>Already have an account?</p>
-                    <Link to="/users/login" exact className="ms-3 text-warning">Log-In</Link>
+                    <Link to="/login" exact className="ms-3 text-warning">Log-In</Link>
                 </div>
             </form>
         </div>

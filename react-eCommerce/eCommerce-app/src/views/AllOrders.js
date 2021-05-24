@@ -9,7 +9,6 @@ import {completeOrder} from '../store/actions/completeOrderActions';
 const AllOrders = () => {
     const dispatch = useDispatch();
     const {orders, loading, err} = useSelector(state => state.allOrdersListReducer);
-    const {success} = useSelector(state => state.completeOrderReducer);
     const history = useHistory();
     const {userInfo} = useSelector(state => state.userLogInReducer);
 
@@ -23,14 +22,13 @@ const AllOrders = () => {
         if(userInfo.isAdmin && order.isPaid){
             dispatch(completeOrder(order)) 
         }
+        dispatch(allOrdersList())
     }
 
 
-    useEffect(() => {
-        if(success){
-            dispatch(allOrdersList()) 
-        } 
-    }, [dispatch, success])
+    useEffect(() => { 
+        dispatch(allOrdersList())
+    }, [dispatch])
 
     return loading ? <Loading/> :
     err ? <Error err={err}/>

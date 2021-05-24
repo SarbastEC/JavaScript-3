@@ -32,7 +32,7 @@ const PlaceOrder = () => {
         history.push(`/orders/${order._id}`)
         dispatch(resetOrder())
       }
-    }, [success, history, order])
+    }, [dispatch, success, history, order])
 
     return (
         <div className='container my-4 border rounded p-4 oreder-bg'>

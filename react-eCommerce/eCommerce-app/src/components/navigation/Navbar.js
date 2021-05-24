@@ -88,8 +88,6 @@ const Navbar = () => {
                         </span>
                         <ul className="dropdown-menu dropdown-menu-end mt-3" aria-labelledby="navbarDropdownMenuLink">
                             <li><Link className="dropdown-item ms-0 text-dark" to='/admin/orders'>Orders</Link></li>
-                            <li><Link className="dropdown-item ms-0 text-dark" to='/admin/products'>Products</Link></li>
-                            <li><Link className="dropdown-item ms-0 text-dark" to='/admin/users'>Users</Link></li>
                         </ul>
                     </li>)}
 
